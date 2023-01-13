@@ -17,5 +17,6 @@ Tabela de conteúdos
  <a href="#autor">Autor</a>
 </p>
 
-#objetivo
-BLAPVKAPCKA,PASKDPOAMDAKSN
+<h4 align="center"> 
+	🚧  React Select 🚀 Em construção...  🚧
+</h4>
