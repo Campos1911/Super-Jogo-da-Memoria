@@ -1,7 +1,7 @@
 ---------JOGO DA MEMÓRIA---------
 
 -----------------------------------------
-| Autor: Anthoni Bernardi Thomes Campos |
+ Autor: Anthoni Bernardi Thomes Campos 
 -----------------------------------------
 
 
