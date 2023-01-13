@@ -26,3 +26,5 @@ Anthoni Bernardi Thomes Campos
 O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peças randômicas, a fim de formar pares de peças iguais, de modo que o jogo chegará ao fim quando não existirem mais pares possíves.
 
 # Escolhas Feitas
+
+## Bibliotecas Utilizada
