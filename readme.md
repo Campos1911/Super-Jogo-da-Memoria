@@ -43,6 +43,6 @@ Foi utilizada no desenvolvimento do projeto, quando a função "srand" estava re
 
 ### Conio.h
 
-Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminar e definir uma cor para as letras.
+Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminal e definir uma cor para as letras.
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212425043-aaae2b58-aca8-42c2-82a3-4c8d81b22943.JPG)
