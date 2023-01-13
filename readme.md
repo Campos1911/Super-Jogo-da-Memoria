@@ -46,3 +46,9 @@ Utilizada para as funções "system("cls")" e "system("color")", responsáveis, 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212425043-aaae2b58-aca8-42c2-82a3-4c8d81b22943.JPG)
 
 # Escolhas Tomadas na Programação
+
+# Função para randomizar letras
+
+![Capturar](https://user-images.githubusercontent.com/119754605/212426798-f26be41a-f7ce-46ea-9735-fb82856b4595.PNG)
+
+As condições apontadas pela imagem postas para que o "randomizador" fornecesse apenas letras maiúsculas de A a Z.
