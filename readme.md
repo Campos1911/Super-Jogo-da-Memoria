@@ -19,7 +19,7 @@ Anthoni Bernardi Thomes Campos
 
 # Status do Jogo
 <h4 align="center"> 
-	🚧  Super Jogo da Memória 🚀 Em construção...  🚧
+	🔴🟢🟡  Super Jogo da Memória -> Em construção...  🔴🟢🟡
 </h4>
 
 # Objetivo
