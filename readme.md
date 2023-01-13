@@ -74,8 +74,7 @@ Utilizado para encerrar o programa quando o usuário inserir as coordenadas "0, 
 
 ### Segundo If
 
-![Capturar](https://user-images.githubusercontent.com/119754605/212429475-1f71d019-22c1-489e-adbd-5fbf73e5a7db.PNG)
-
+![Capturar](https://user-images.githubusercontent.com/119754605/212429842-5c0515f9-50dc-41bc-92c4-3402c35769fd.PNG)
 
 Utilizado para alertar o jogador sobre coordenadas inválidas inseridas por ele
 
