@@ -1,4 +1,4 @@
-<h1 align="center">JOGO DA MEMÓRIA</h1>
+<h1 align="center">Super Jogo da Memória</h1>
 
 <p align="center">Esse projeto foi feito para um trabalho da disciplina de Programação I, no curso de Engenharia Elétrica, da Universidade Federal do Espírito Santo (UFES).</p>
 
@@ -18,5 +18,5 @@ Tabela de conteúdos
 </p>
 
 <h4 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  Super Jogo da Memória 🚀 Em construção...  🚧
 </h4>
