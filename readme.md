@@ -30,8 +30,8 @@ O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peça
 ## Bibliotecas Utilizadas
 Para esse projeto, optei por utilizar as bibliotecas padrões da linguagem C, como exemplo:
 
-### Stdio.h
+### Stdio.h:
 Utilizada para entrada e saída da linguagem (printf e scanf)
 
-### Stdlib.h
+### Stdlib.h:
 Utilizada para as funções randômicas (srand e rand)
