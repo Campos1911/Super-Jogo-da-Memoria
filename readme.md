@@ -6,7 +6,7 @@ Tabela de conteúdos
 =================
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#StatusdoJogo">Status</a> • 
+ <a href="#status-do-jogo">Status</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
