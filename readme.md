@@ -1,4 +1,4 @@
----------JOGO DA MEMÓRIA---------
+JOGO DA MEMÓRIA
 
 -----------------------------------------
  Autor: Anthoni Bernardi Thomes Campos 
