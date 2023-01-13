@@ -37,13 +37,13 @@ Utilizada para as funções randômicas (srand e rand).
 ### Time.h:
 Foi utilizada no desenvolvimento do projeto, quando a função "srand" estava recebendo o "valor" time(NULL). Apesar de não estar utilizando no código atual, deixei como opção para substituir a variável "semente", de modo que o código gere valores aleatórios sem que o usuário insira valor algum.
 
-![Capturar](https://user-images.githubusercontent.com/119754605/212424070-f7d4523b-b741-414a-9d40-fbde0e7a0e60.JPG)
+![Capturar](https://user-images.githubusercontent.com/119754605/212426798-f26be41a-f7ce-46ea-9735-fb82856b4595.PNG)
 
 ### Conio.h
 
 Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminal e definir uma cor para as letras.
 
-![Capturar](https://user-images.githubusercontent.com/119754605/212425043-aaae2b58-aca8-42c2-82a3-4c8d81b22943.JPG)
+![Capturar](https://user-images.githubusercontent.com/119754605/212427251-8831c0c8-35e2-4664-bc1a-c39a27cb617d.PNG)
 
 # Escolhas Tomadas na Programação
 
@@ -51,4 +51,4 @@ Utilizada para as funções "system("cls")" e "system("color")", responsáveis, 
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212426798-f26be41a-f7ce-46ea-9735-fb82856b4595.PNG)
 
-As condições apontadas pela imagem postas para que o "randomizador" fornecesse apenas letras maiúsculas de A a Z.
+As condições apontadas pela imagem postas para que o "randomizador" fornecesse apenas letras maiúsculas de A a Z. Ou seja, o "65" é referente ao ponto de partida (no caso, o "A" maiúsculo na tabela ANSI), e o 26 é o total de "amostras" que ele pode percorrer acima do "65".
