@@ -13,10 +13,6 @@ Tabela de conteúdos
  <a href="#autor">Autor</a>
 </p>
 
-# Autor 
-Anthoni Bernardi Thomes Campos 
-
-
 # Status do Jogo
 <h4 align="center"> 
 	🔴🟢🟡  Super Jogo da Memória -> Em construção...  🔴🟢🟡
@@ -96,3 +92,6 @@ Bastante parecido com o segundo if, porém, depois de demonstrar as casas que o 
 
 
 Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontrar
+
+# Autor 
+Anthoni Bernardi Thomes Campos 
