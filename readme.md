@@ -89,3 +89,10 @@ Se as coordenadas indicadas possuírem valores iguais, o código contabiliza um 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212429658-83fbec9a-bc14-401a-8c2d-cd5b42864b48.PNG)
 
 Bastante parecido com o segundo if, porém, depois de demonstrar as casas que o usuário solicitou, ele muda os valores delas para "0" na matriz máscara, de modo que essas cartas ficarão ocultas na próxima impressão.
+
+### Quinto If
+
+![Capturar](https://user-images.githubusercontent.com/119754605/212430253-007ce609-f4aa-4182-9b00-01cd7378334f.PNG)
+
+
+Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontrar
