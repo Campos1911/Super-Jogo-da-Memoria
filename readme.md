@@ -67,16 +67,26 @@ Essa função é responsável por alterar uma matriz alternativa quando o jogado
 
 ### Primeiro If
 
+![Capturar](https://user-images.githubusercontent.com/119754605/212429363-47795815-0054-4935-8bb4-ad779fd49cca.PNG)
+
+
 Utilizado para encerrar o programa quando o usuário inserir as coordenadas "0, 0, 0, 0"
 
 ### Segundo If
+
+![Capturar](https://user-images.githubusercontent.com/119754605/212429475-1f71d019-22c1-489e-adbd-5fbf73e5a7db.PNG)
+
 
 Utilizado para alertar o jogador sobre coordenadas inválidas inseridas por ele
 
 ### Terceiro If
 
+![Capturar](https://user-images.githubusercontent.com/119754605/212429578-c33662d7-c155-4707-b1c5-3e682dbce2fa.PNG)
+
 Se as coordenadas indicadas possuírem valores iguais, o código contabiliza um "aux" a menos (subtrai um par presente), troca a mesma posição na matriz máscara de "0" para "1", de modo que essas casas ficarão aparentes na próxima impressão.
 
 ### Quarto If
+
+![Capturar](https://user-images.githubusercontent.com/119754605/212429658-83fbec9a-bc14-401a-8c2d-cd5b42864b48.PNG)
 
 Bastante parecido com o segundo if, porém, depois de demonstrar as casas que o usuário solicitou, ele muda os valores delas para "0" na matriz máscara, de modo que essas cartas ficarão ocultas na próxima impressão.
