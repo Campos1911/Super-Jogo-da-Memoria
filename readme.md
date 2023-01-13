@@ -22,4 +22,4 @@ Anthoni Bernardi Thomes Campos
 	🚧  Super Jogo da Memória 🚀 Em construção...  🚧
 </h4>
 
-# Objetivos
+# Objetivo
