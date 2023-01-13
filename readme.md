@@ -7,7 +7,7 @@ Tabela de conteúdos
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#status-do-jogo">Status</a> • 
- <a href="#escolhas-feitas">Tecnologias</a> • 
+ <a href="#escolhas-feitas">Escolhas Feitas</a> • 
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
