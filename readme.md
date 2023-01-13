@@ -27,4 +27,7 @@ O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peça
 
 # Escolhas Feitas
 
-## Bibliotecas Utilizada
+## Bibliotecas Utilizadas
+Para esse projeto, optei por utilizar as bibliotecas padrões da linguagem C, como exemplo:
+
+### stdio.h
