@@ -28,7 +28,7 @@ O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peça
 # Escolhas Feitas
 
 ## Bibliotecas Utilizadas
-Para esse projeto, optei por utilizar as bibliotecas padrões da linguagem C, como exemplo:
+Para esse projeto, optei por utilizar as seguintes bibliotecas padrões da linguagem C:
 
 ### Stdio.h:
 Utilizada para entrada e saída da linguagem (printf e scanf).
@@ -40,3 +40,9 @@ Utilizada para as funções randômicas (srand e rand).
 Foi utilizada no desenvolvimento do projeto, quando a função "srand" estava recebendo o "valor" time(NULL). Apesar de não estar utilizando no código atual, deixei como opção para substituir a variável "semente", de modo que o código gere valores aleatórios sem que o usuário insira valor algum.
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212424070-f7d4523b-b741-414a-9d40-fbde0e7a0e60.JPG)
+
+### Conio.h
+
+Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminar e definir uma cor para as letras.
+
+![Capturar](https://user-images.githubusercontent.com/119754605/212425043-aaae2b58-aca8-42c2-82a3-4c8d81b22943.JPG)
