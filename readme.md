@@ -16,3 +16,6 @@ Tabela de conteúdos
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
+
+#objetivo
+BLAPVKAPCKA,PASKDPOAMDAKSN
