@@ -20,3 +20,5 @@ Tabela de conteúdos
 <h4 align="center"> 
 	🚧  Super Jogo da Memória 🚀 Em construção...  🚧
 </h4>
+
+# Objetivos
