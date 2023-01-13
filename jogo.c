@@ -214,7 +214,7 @@ int main()
                     printf("Sem pares disponiveis, fim de jogo!!\n");
                     break;
                 }
-                printf("%d", aux);
+                printf("FALTAM %d PARES\n", aux);
             
     }
     return 0;
