@@ -7,7 +7,7 @@ Tabela de conteúdos
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
  <a href="#status-do-jogo">Status</a> • 
- <a href="#escolhas-feitas">Escolhas Feitas</a> • 
+ <a href="#bibliotecas-utilizadas">Bibliotecas Utilizadas</a> • 
  <a href="#contribuicao">Contribuição</a> • 
  <a href="#licenc-a">Licença</a> • 
  <a href="#autor">Autor</a>
@@ -25,9 +25,7 @@ Anthoni Bernardi Thomes Campos
 # Objetivo
 O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peças randômicas, a fim de formar pares de peças iguais, de modo que o jogo chegará ao fim quando não existirem mais pares possíves.
 
-# Escolhas Feitas
-
-## Bibliotecas Utilizadas
+# Bibliotecas Utilizadas
 Para esse projeto, optei por utilizar as seguintes bibliotecas padrões da linguagem C:
 
 ### Stdio.h:
