@@ -1,4 +1,5 @@
-<h1 align="center">Super Jogo da Memória</h1>
+# Super Jogo da Memória
+<!-- <h1 align="center">Super Jogo da Memória</h1> -->
 
 <p align="center">Esse projeto foi feito para um trabalho da disciplina de Programação I, no curso de Engenharia Elétrica, da Universidade Federal do Espírito Santo (UFES).</p>
 
@@ -35,7 +36,7 @@ Foi utilizada no desenvolvimento do projeto, quando a função "srand" estava re
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212426798-f26be41a-f7ce-46ea-9735-fb82856b4595.PNG)
 
-### Conio.h
+### Conio.h:
 
 Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminal e definir uma cor para as letras.
 
