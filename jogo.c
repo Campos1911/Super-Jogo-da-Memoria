@@ -183,6 +183,7 @@ int main()
         scanf("%d %d %d %d", &l1, &c1, &l2, &c2);
             if (l1 == 0 && c1 == 0 && l2==0 && c2 == 0) //Se colocar as coordenadas zero, o jogo acaba
             {
+                system("color 6");
                 printf("Ate mais, jogador(a)!!\n");
                 break;
             }
@@ -214,6 +215,7 @@ int main()
             
                 if (aux==0)
                 {
+                    system("color 2");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
                     break;
                 }
