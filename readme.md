@@ -94,5 +94,7 @@ Bastante parecido com o segundo if, porém, depois de demonstrar as casas que o 
 
 Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontrar
 
+# Implementações Posteriores
+
 # Autor 
 Anthoni Bernardi Thomes Campos 
