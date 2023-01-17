@@ -168,10 +168,10 @@ int main()
     scanf("%d", &semente);
     printf("\n");
     randomiza(semente); //Chama a função, usando o valor escolhido pelo jogador
-    // intervalo();
-    // intervalo();    
-    // intervalo();
-    // system("cls");
+    intervalo();
+    intervalo();    
+    intervalo();
+    system("cls");
     printf("\n");
     tabuleiroOculto(); //Printa o tabuleiro com as " * "
     aux = pares(teste); //Testa quantos pares o tabuleiro possui
