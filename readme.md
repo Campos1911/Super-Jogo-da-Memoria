@@ -10,7 +10,7 @@ Tabela de conteúdos
  <a href="#status-do-jogo">Status</a> • 
  <a href="#bibliotecas-utilizadas">Bibliotecas Utilizadas</a> • 
  <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> •
- <a href="#escolhas-tomadas-na-programação">Implementações Posteriores</a> • 
+ <a href="#implementações-posteriores">Implementações Posteriores</a> • 
  <a href="#autor">Autor</a>
 </p>
 
@@ -95,6 +95,12 @@ Bastante parecido com o segundo if, porém, depois de demonstrar as casas que o 
 Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontrar
 
 # Implementações Posteriores
+
+### Cores ao acertar e errar
+
+![Capturar](https://user-images.githubusercontent.com/119754605/213035087-81f1db98-54d9-4105-a625-52db03fdb0c5.PNG)
+
+Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indicar se foi uma escolha correta ou incorreta.
 
 # Autor 
 Anthoni Bernardi Thomes Campos 

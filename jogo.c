@@ -192,7 +192,7 @@ int main()
             }
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
-                system("color 2");
+                system("color 2"); //Muda o terminal para verde, indicando acerto
                 aux--;
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
@@ -202,7 +202,7 @@ int main()
             }
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
             {
-                system("color 4");
+                system("color 4"); //Muda o terminal para vermelho - indicando erro
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção
                 tabuleiro2[l2][c2] = 1;
                 system("cls");
