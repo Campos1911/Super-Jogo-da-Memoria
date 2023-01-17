@@ -9,7 +9,8 @@ Tabela de conteúdos
  <a href="#objetivo">Objetivo</a> •
  <a href="#status-do-jogo">Status</a> • 
  <a href="#bibliotecas-utilizadas">Bibliotecas Utilizadas</a> • 
- <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> • 
+ <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> •
+ <a href="#escolhas-tomadas-na-programação">Implementações Posteriores</a> • 
  <a href="#autor">Autor</a>
 </p>
 
