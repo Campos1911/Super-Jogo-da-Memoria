@@ -81,9 +81,10 @@ void randomiza(int semente) //Randomiza letras em posições do tabuleiro
     {
         for (int j = 0; j < 4; j++)
         {
-            printf("  %c  ", tabuleiro[i][j] = 65 + rand() % 26);
+            tabuleiro[i][j] = 65 + rand() % 26;
+            printf("  %c  ", tabuleiro[i][j]);
         }
-    printf("\n\n");
+        printf("\n\n");
     }
 }
 
