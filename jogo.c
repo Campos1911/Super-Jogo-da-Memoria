@@ -181,7 +181,7 @@ int main()
     while (1)
     {
         printf("Escolha duas coordenadas de linha e coluna (caso queira sair, insira as coordenadas 0, 0, 0, 0)\n");
-        printf("FALTAM %d PARES\n", aux);
+        printf("FALTAM %d PARES (OBSERVE QUE AS LETRAS IMAPRES FORMAM PAR COM AS LETRAS JÁ DESCOBERTAS)\n", aux);
         scanf("%d %d %d %d", &l1, &c1, &l2, &c2);
             if (l1 == 0 && c1 == 0 && l2==0 && c2 == 0) //Se colocar as coordenadas zero, o jogo acaba
             {
