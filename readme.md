@@ -11,8 +11,10 @@ Tabela de conteúdos
  <a href="#bibliotecas-utilizadas">Bibliotecas Utilizadas</a> • 
  <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> •
  <a href="#implementações-posteriores">Implementações Posteriores</a> • 
+ <a href="#como-rodar-o-jogo">Como rodar o jogo?</a> • 
+ <a href="#licença">Licença</a> • 
  <a href="#autor">Autor</a>
-</p>
+ </p>
 
 # Status do Jogo
 <h4 align="center"> 
