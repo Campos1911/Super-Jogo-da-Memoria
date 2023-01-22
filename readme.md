@@ -114,6 +114,10 @@ Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontra
 Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indicar se foi uma escolha correta ou incorreta.
 
 # Autor 
-Anthoni Bernardi Thomes Campos 
+Projeto desenvolvido por Anthoni Campos - Entre em contato!
+
+[![Gmail Badge](https://img.shields.io/badge/-anthonithomes@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:anthonithomes@gmail.com)](mailto:anthonithomes@gmail.com)
 
 # Licença
+
+* Clique no botão azul para acessar informações sobre a licença: [MIT](https://github.com/Campos1911/Jogo-da-memoria/blob/main/LICENSE)
