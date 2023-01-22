@@ -3,7 +3,7 @@
  * Disciplina: Programação I
  * Data de Entrega: 22/01/2023
  *
- * ----------------------
+ * ------------------------------------------------------------------------------
  * Nome do Projeto : Super Jogo da Memória
  * Objetivo: Criar um jogo da memória que atualiza seu tabuleiro a cada acerto
  * e interaja com o jogador, conforme suas escolhas
