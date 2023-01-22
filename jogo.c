@@ -126,32 +126,51 @@ void altera()
 
 int pares(int par)
 {
-    int valTeste;
+    int contador[16] = {0};
+    int conta = 0;
+    int confirmador = 0;
+    int k = 0;
     par = 0;
     
     for (int i = 0; i < 4; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            valTeste = tabuleiro[i][j];
-            for (int k = 0; k < 4; k++)
-            {
-                for (int l = 0; l < 4; l++)
-                {
-                    if (tabuleiro[k][l]==valTeste)
-                    {
-                        par++;
-                    }
-                    
-                }
-                
-            }
-            
+            contador[k] = tabuleiro[i][j];
+            k++;
         }
-        
     }
 
-    par = (par-16)/2;
+    for (int i = 0; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            for (int k = 0; k < 16; k++)
+            {
+                if (contador[k]==tabuleiro[i][j])
+                {
+                    conta++;
+                }
+            }
+            
+            if (conta==2)
+            {
+                par++;
+            }
+            
+            else if (conta==3)
+            {
+                confirmador++;
+            }
+            
+            else if (conta==4)
+            {
+                par++;
+            }
+        }
+    }
+
+    par = par/2;
     return par;
 }
 
@@ -181,7 +200,7 @@ int main()
     while (1)
     {
         printf("Escolha duas coordenadas de linha e coluna (caso queira sair, insira as coordenadas 0, 0, 0, 0)\n");
-        printf("FALTAM %d PARES (OBSERVE QUE AS LETRAS IMAPRES FORMAM PAR COM AS LETRAS JÁ DESCOBERTAS)\n", aux);
+        printf("FALTAM %d PARES\n", aux);
         scanf("%d %d %d %d", &l1, &c1, &l2, &c2);
             if (l1 == 0 && c1 == 0 && l2==0 && c2 == 0) //Se colocar as coordenadas zero, o jogo acaba
             {
