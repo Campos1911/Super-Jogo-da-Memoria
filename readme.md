@@ -18,7 +18,7 @@ Tabela de conteúdos
 
 # Status do Jogo
 <h4 align="center"> 
-	🔴🟢🟡  Super Jogo da Memória -> Em desenvolvimento...  🔴🟢🟡
+	🔴🟢🟡  Super Jogo da Memória -> Em desenvolvimento 🚧 <-  🔴🟢🟡
 </h4>
 
 # Objetivo
