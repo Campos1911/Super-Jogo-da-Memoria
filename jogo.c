@@ -72,6 +72,12 @@ void interface() //Interface montada para dar ao código mais semelhança com um
             
         }
     intervalo();
+    printf("\n\n\t-----Para jogar, utilize coordenadas de 0 a 3, para linhas e colunas-----");
+    intervalo();
+    intervalo();
+    intervalo();
+    intervalo();
+    intervalo();
     system("cls");
 }
 
