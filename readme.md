@@ -113,6 +113,12 @@ Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontra
 
 Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indicar se foi uma escolha correta ou incorreta.
 
+### Coordenada já descoberta
+
+![Capturar](https://user-images.githubusercontent.com/119754605/213897859-99525dbb-3456-47fb-848a-55bb759fd6c4.PNG)
+
+Se o jogador tentar inserir uma coordenada já descoberta por ele, o jogo muda para a cor vermelha e alerta sobre a escolha incorreta.
+
 # Autor 
 Projeto desenvolvido por Anthoni Campos - Entre em contato!
 

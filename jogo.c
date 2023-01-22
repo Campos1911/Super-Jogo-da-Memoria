@@ -190,16 +190,30 @@ int main()
         printf("Escolha duas coordenadas de linha e coluna (caso queira sair, insira as coordenadas 0, 0, 0, 0)\n");
         printf("FALTAM %d PARES\n", aux);
         scanf("%d %d %d %d", &l1, &c1, &l2, &c2);
+            
             if (l1 == 0 && c1 == 0 && l2==0 && c2 == 0) //Se colocar as coordenadas zero, o jogo acaba
             {
                 system("color 6");
                 printf("Ate mais, jogador(a)!!\n");
                 break;
             }
+            
             else if (l1 >= 4 || l1 < 0 || c1 >= 4 || c1 < 0 || l2 >= 4 || l2 < 0 || c2 >= 4 || c2 < 0)
             {
                 printf("Coordenada invalida, tente novamente!!\n\n");
             }
+            
+            else if (tabuleiro2[l1][c1] == 1 || tabuleiro2[l2][c2] == 1)
+            {
+                system("color 4");
+                printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
+                intervalo();
+                intervalo();
+                intervalo();
+                system("cls");
+                altera();
+            }
+            
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
                 system("color 2"); //Muda o terminal para verde, indicando acerto
@@ -210,6 +224,7 @@ int main()
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera();
             }
+            
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
             {
                 system("color 4"); //Muda o terminal para vermelho - indicando erro
@@ -220,8 +235,7 @@ int main()
                 altera();
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
-            }
-            
+            }            
                 if (aux==0)
                 {
                     system("color 2");
