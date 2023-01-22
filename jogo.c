@@ -16,6 +16,7 @@
 
 int tabuleiro[4][4]; //Tabuleiro padrão do jogo
 int tabuleiro2[4][4] = {0}; //Tabuleiro máscara, utilizado para printar a casa descoberta, quando certa
+int contador[16] = {0};
 
 void interface() //Interface montada para dar ao código mais semelhança com um jogo
 {
@@ -76,6 +77,7 @@ void interface() //Interface montada para dar ao código mais semelhança com um
 
 void randomiza(int semente) //Randomiza letras em posições do tabuleiro
 {
+    int k = 0;
     srand(semente);
     
     for (int i = 0; i < 4; i++)
@@ -83,6 +85,8 @@ void randomiza(int semente) //Randomiza letras em posições do tabuleiro
         for (int j = 0; j < 4; j++)
         {
             tabuleiro[i][j] = 65 + rand() % 26;
+            contador[k] = tabuleiro[i][j];
+            k++;
             printf("  %c  ", tabuleiro[i][j]);
         }
         printf("\n\n");
@@ -126,20 +130,8 @@ void altera()
 
 int pares(int par)
 {
-    int contador[16] = {0};
     int conta = 0;
-    int confirmador = 0;
-    int k = 0;
     par = 0;
-    
-    for (int i = 0; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            contador[k] = tabuleiro[i][j];
-            k++;
-        }
-    }
 
     for (int i = 0; i < 4; i++)
     {
@@ -153,20 +145,16 @@ int pares(int par)
                 }
             }
             
-            if (conta==2)
+            if (conta==2 || conta ==3)
             {
                 par++;
             }
-            
-            else if (conta==3)
-            {
-                confirmador++;
-            }
-            
+
             else if (conta==4)
             {
                 par++;
             }
+            conta = 0;
         }
     }
 
