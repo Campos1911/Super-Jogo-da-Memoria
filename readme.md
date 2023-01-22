@@ -1,5 +1,5 @@
 # Super Jogo da Memória
-<!-- <h1 align="center">Super Jogo da Memória</h1> -->
+
 
 <p align="center">Esse projeto foi feito para um trabalho da disciplina de Programação I, no curso de Engenharia Elétrica, da Universidade Federal do Espírito Santo (UFES).</p>
 
@@ -21,6 +21,15 @@ Tabela de conteúdos
 
 # Objetivo
 O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peças randômicas, a fim de formar pares de peças iguais, de modo que o jogo chegará ao fim quando não existirem mais pares possíves.
+
+# Como Rodar o Jogo?
+Antes de começar, você vai precisar ter instalado em sua máquina um compilador de linguagem " C ", por exemplo o GCC. Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+* Para rodar o código, você precisa ir até o terminal e digitar: gcc jogo.c -o jogo
+
+* Em seguida, será criado o arquivo " jogo.exe "
+
+* Para jogar basta digitar: " ./jogo "
 
 # Bibliotecas Utilizadas
 Para esse projeto, optei por utilizar as seguintes bibliotecas padrões da linguagem C:
@@ -104,3 +113,5 @@ Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indic
 
 # Autor 
 Anthoni Bernardi Thomes Campos 
+
+# Licença
