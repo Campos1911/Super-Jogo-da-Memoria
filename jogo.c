@@ -74,9 +74,9 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     intervalo();
     printf("\n\n\t-----Para jogar, utilize coordenadas de 0 a 3, para linhas e colunas-----");
     intervalo();
-    intervalo();
-    intervalo();
-    intervalo();
+    intervalo(); //As funçoes intervalo foram usadas como forma de dar um
+    intervalo(); //tempo entre cada apresentação (usadas para evitar que
+    intervalo(); //a biblioteca windows.h fosse uma opção)
     intervalo();
     system("cls");
 }
@@ -91,8 +91,8 @@ void randomiza(int semente) //Randomiza letras em posições do tabuleiro
         for (int j = 0; j < 4; j++)
         {
             tabuleiro[i][j] = 65 + rand() % 26;
-            contador[k] = tabuleiro[i][j];
-            k++;
+            contador[k] = tabuleiro[i][j]; //Aqui a variável contador recebe os valores da matriz
+            k++;                           //para poder fazer a verificação dos pares, futuramente.
             printf("  %c  ", tabuleiro[i][j]);
         }
         printf("\n\n");
@@ -143,11 +143,11 @@ int pares(int par)
     {
         for (int j = 0; j < 4; j++)
         {
-            for (int k = 0; k < 16; k++)
+            for (int k = 0; k < 16; k++) //percorre os valores
             {
                 if (contador[k]==tabuleiro[i][j])
                 {
-                    conta++;
+                    conta++; //variável para identificar o número de repetições
                 }
             }
             
@@ -160,11 +160,11 @@ int pares(int par)
             {
                 par++;
             }
-            conta = 0;
-        }
+            conta = 0; //Aqui ele zera a variável
+        }              //para poder começar uma nova posição
     }
 
-    par = par/2;
+    par = par/2; //Divide por dois, pois o par se repete ao percorrer a matriz
     return par;
 }
 
@@ -204,13 +204,13 @@ int main()
                 break;
             }
             
-            else if (l1 >= 4 || l1 < 0 || c1 >= 4 || c1 < 0 || l2 >= 4 || l2 < 0 || c2 >= 4 || c2 < 0)
+            else if (l1 >= 4 || l1 < 0 || c1 >= 4 || c1 < 0 || l2 >= 4 || l2 < 0 || c2 >= 4 || c2 < 0) //Coordenadas inválidas
             {
                 printf("Coordenada invalida, tente novamente!!\n\n");
             }
             
-            else if (tabuleiro2[l1][c1] == 1 || tabuleiro2[l2][c2] == 1)
-            {
+            else if (tabuleiro2[l1][c1] == 1 || tabuleiro2[l2][c2] == 1) //Quando a coordenada já foi descoberta, é impossível
+            {                                                            //"reencontrar" ela       
                 system("color 4");
                 printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
                 intervalo();
@@ -242,8 +242,8 @@ int main()
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
             }            
-                if (aux==0)
-                {
+                if (aux==0) //Variável "aux" foi utilizada para 
+                {           //retornar o valor de pares da função
                     system("color 2");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
                     break;
