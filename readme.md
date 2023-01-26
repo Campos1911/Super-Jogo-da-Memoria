@@ -7,7 +7,7 @@
 
 O jogo foi desenvolvido no sistema operacional "Windows". Portanto, é preferivel que o código seja testado em máquinas com esse sistema instalado, para evitar possíveis problemas de incompatibilidade.
 
-* Para jogar o jogo em uma máquina linux, você precisará da biblioteca "conio.h" instalada, para isso, utilize esse [Tutorial](https://www.vivaolinux.com.br/dica/A-conioh-para-GNU-Linux)
+* Para jogar o jogo em uma máquina linux, você precisará da biblioteca "conio.h" instalada, para isso, utilize esse [Tutorial](https://www.youtube.com/watch?v=V119IzUgwJw)
 
 Tabela de conteúdos
 =================
