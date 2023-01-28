@@ -126,6 +126,8 @@ Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indic
 
 Se o jogador tentar inserir uma coordenada já descoberta por ele, o jogo muda para a cor vermelha e alerta sobre a escolha incorreta.
 
+# Segunda Versão - Coisas acrescentadas	
+
 # Autor 
 Projeto desenvolvido por Anthoni Campos - Entre em contato!
 
