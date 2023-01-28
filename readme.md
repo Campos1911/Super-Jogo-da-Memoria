@@ -18,7 +18,8 @@ Tabela de conteúdos
  <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> •
  <a href="#implementações-posteriores">Implementações Posteriores</a> • 
  <a href="#como-rodar-o-jogo">Como rodar o jogo?</a> • 
- <a href="#licença">Licença</a> • 
+ <a href="#licença">Licença</a> •
+ <a href="#segunda-versão">Segunda Versão</a> •
  <a href="#autor">Autor</a>
  </p>
 
