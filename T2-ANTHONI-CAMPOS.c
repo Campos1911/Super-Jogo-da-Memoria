@@ -307,9 +307,9 @@ int main(int argc, char *argv[])
                 system("cls");
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera();
-                a.pontuacao[i]++;
+                a.pontuacao[i]++; //Incrementa um ponto para o jogador que acertar
                 
-                arq = fopen(argv[1], "w");
+                arq = fopen(argv[1], "w"); //Mesma função que a abertura de cima, porém, começa a contabilizar pontos
                 if (arq == NULL)
                 {
                     printf("Erro ao abrir!\n");
@@ -318,11 +318,11 @@ int main(int argc, char *argv[])
                 else
                 {
                     fprintf(arq, "Pontuação:\n", stdout);
-                    fprintf(stdout, "Pontuação:\n", stdout);
+                    fprintf(stdout, "Pontuação:\n", stdout); //Printa também o arquivo na tela
                         for (int i = 3; i < argc; i++)
                         {
                             fprintf(arq, "%s: %d\n", nome[i].jogadores, a.pontuacao[i]);
-                            fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]);
+                            fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]); //Printa pontos na tela
                         }
                 }
                 fclose(arq);
@@ -343,7 +343,7 @@ int main(int argc, char *argv[])
                 {           //retornar o valor de pares da função
                     system("color 2");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
-                    result = fopen("Result_.txt", "w"); //Chamada para abrir e escrever no arquivo
+                    result = fopen("Result_.txt", "w"); //Chamada para abrir e escrever no arquivo de resultado
                     if (arq == NULL) //Se retornar nulo, deu erro
                     {
                         printf("Erro ao abrir!\n");
