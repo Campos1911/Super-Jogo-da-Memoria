@@ -3,6 +3,12 @@
 
 <p align="center">Esse projeto foi feito para um trabalho da disciplina de Programação I, no curso de Engenharia Elétrica, da Universidade Federal do Espírito Santo (UFES).</p>
 
+## Observação sobre o código
+
+O jogo foi desenvolvido no sistema operacional "Windows". Portanto, é preferivel que o código seja testado em máquinas com esse sistema instalado, para evitar possíveis problemas de incompatibilidade.
+
+* Para jogar o jogo em uma máquina linux, você precisará da biblioteca "conio.h" instalada, para isso, utilize esse [Tutorial](https://www.youtube.com/watch?v=V119IzUgwJw)
+
 Tabela de conteúdos
 =================
 <p align="center">
