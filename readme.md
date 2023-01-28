@@ -18,7 +18,8 @@ Tabela de conteúdos
  <a href="#escolhas-tomadas-na-programação">Escolhas Tomadas</a> •
  <a href="#implementações-posteriores">Implementações Posteriores</a> • 
  <a href="#como-rodar-o-jogo">Como rodar o jogo?</a> • 
- <a href="#licença">Licença</a> • 
+ <a href="#licença">Licença</a> •
+ <a href="#segunda-versão---coisas-acrescentadas">Segunda Versão</a> •
  <a href="#autor">Autor</a>
  </p>
 
@@ -124,6 +125,8 @@ Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indic
 ![Capturar](https://user-images.githubusercontent.com/119754605/213897859-99525dbb-3456-47fb-848a-55bb759fd6c4.PNG)
 
 Se o jogador tentar inserir uma coordenada já descoberta por ele, o jogo muda para a cor vermelha e alerta sobre a escolha incorreta.
+
+# Segunda Versão - Coisas acrescentadas	
 
 # Autor 
 Projeto desenvolvido por Anthoni Campos - Entre em contato!
