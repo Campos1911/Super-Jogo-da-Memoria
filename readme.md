@@ -137,14 +137,17 @@ Foram criadas duas structs, para armazenar a pontuação e o nome dos jogadores.
 ## Função "zera_struct"
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/215234774-1e92dabe-b2d0-4507-97dd-4ccb6a1842e2.PNG)
+
 Basicamente, foi utilizada para zerar a pontuação da struct, antes de começar a contabilizar.
 
 ## Impressão de arquivo com records
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/215234616-cb1538f3-d735-4d6d-9300-455239d818c4.PNG)
+
 Aqui, esse trecho de código cria um arquivo com o nome "Result_.txt", para salvar os pontos obtidos ao longo do jogo.
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/215234886-86d9ed7e-6ef4-457e-baf5-2cedaa9565c5.PNG)
+
 Esse é outro trecho, que também salva os pontos em um arquivo (com o nome fornecido pelos jogadores) e printa a tabela de pontos na tela (ao acertar algum par).
 
 # Autor 
