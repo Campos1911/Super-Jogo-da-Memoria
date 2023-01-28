@@ -19,7 +19,7 @@ Tabela de conteúdos
  <a href="#implementações-posteriores">Implementações Posteriores</a> • 
  <a href="#como-rodar-o-jogo">Como rodar o jogo?</a> • 
  <a href="#licença">Licença</a> •
- <a href="#segunda-versão">Segunda Versão</a> •
+ <a href="#segunda-versão---coisas-acrescentadas">Segunda Versão</a> •
  <a href="#autor">Autor</a>
  </p>
 
