@@ -198,9 +198,9 @@ void zera_struct(tPontuacao* a) //Ponteiro acessa o endereço da struct
 int main(int argc, char *argv[])
 {
     int l1, c1, l2, c2, semente, numero_casas; //Usado nas coordenadas
-    int aux, teste; //Usados nos pares
+    int aux, teste, n; //Usados nos pares
     int k = 3; //Usado para o argv com nomes
-    char nome_result[TAM];
+    char nome_result[TAM] = "Result_";
     FILE *arq; //Ponteiro para arquivo
     FILE *result;
 
@@ -236,13 +236,12 @@ int main(int argc, char *argv[])
                 {
                     fprintf(arq, "%s: %d\n", nome[i].jogadores, a.pontuacao[i]); //Printa os jogadores e seus pontos
                 }
-        }
+        }   
     
     fclose(arq); //Fecha o arquivo
 
 
     numero_casas = atoi(argv[2]); //Converte tamanho da matriz para int, para imprimir o tabuleiro
-    numero_casas = malloc(numero_casas*sizeof(int));
 
     system("color 3");  //Muda a cor da letra
     system("cls"); //Limpa o terminal
@@ -345,7 +344,10 @@ int main(int argc, char *argv[])
                 {           //retornar o valor de pares da função
                     system("color 2");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
-                    result = fopen("Result_.txt", "w"); //Chamada para abrir e escrever no arquivo de resultado
+                    
+                    strcat(nome_result, argv[1]); //Função da string.h para concatenar nome do arquivo
+                    
+                    result = fopen(nome_result, "w"); //Chamada para abrir e escrever no arquivo de resultado
                     if (arq == NULL) //Se retornar nulo, deu erro
                     {
                         printf("Erro ao abrir!\n");
