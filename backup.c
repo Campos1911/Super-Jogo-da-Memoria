@@ -200,7 +200,7 @@ int main(int argc, char *argv[])
     int l1, c1, l2, c2, semente, numero_casas; //Usado nas coordenadas
     int aux, teste, n; //Usados nos pares
     int k = 3; //Usado para o argv com nomes
-    char nome_result[TAM] = "Result_";
+    char nome_result[TAM] = "Result_"; //Utilizado para concatenar nome do arquivo
     FILE *arq; //Ponteiro para arquivo
     FILE *result;
 
@@ -302,7 +302,7 @@ int main(int argc, char *argv[])
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
                 system("color 2"); //Muda o terminal para verde, indicando acerto
-                aux--;
+                aux--; //Tira um par
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
                 system("cls");
