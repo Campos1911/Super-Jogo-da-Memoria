@@ -77,7 +77,7 @@ void interface(int tamanho_matriz) //Interface montada para dar ao código mais 
     sleep(1); //tempo entre cada apresentação (usadas para evitar que
     sleep(1); //a biblioteca windows.h fosse uma opção)
     sleep(1);
-    system("cls");
+    printf("\e[H\e[2J");
 }
 
 void randomiza(int semente, int contador[TAM], int tabuleiro[TAM][TAM], int tamanho_matriz) //Randomiza letras em posições do tabuleiro
@@ -220,8 +220,8 @@ int main(int argc, char *argv[])
     fclose(arq); //Fecha o arquivo
 
     tamanho_matriz = atoi(argv[2]); //Converte tamanho da matriz para int, para imprimir o tabuleiro
-    system("color 3");  //Muda a cor da letra
-    system("cls"); //Limpa o terminal
+    printf("\033[34m");  //Muda a cor da letra
+    printf("\e[H\e[2J"); //Limpa o terminal
     interface(tamanho_matriz);
     printf("Por favor, insira um valor de semente para começarmos: "); //Pede a semente para testes
     scanf("%d", &semente);
@@ -230,7 +230,7 @@ int main(int argc, char *argv[])
     sleep(1);
     sleep(1);    
     sleep(1);
-    system("cls");
+    printf("\e[H\e[2J");
     printf("\n");
     tabuleiroOculto(tamanho_matriz); //Printa o tabuleiro com as " * "
     aux = pares(teste, tamanho_matriz, tabuleiro,contador); //Testa quantos pares o tabuleiro possui
@@ -246,7 +246,7 @@ int main(int argc, char *argv[])
             
             if ((l1 == 0 && c1 == 0) || (l2==0 && c2 == 0)) //Se colocar as coordenadas zero, o jogo acaba
             {
-                system("color 6");
+                printf("\033[33m");
                 printf("Ate mais, jogador(a)!!\n");
                 exit(1);
             }
@@ -259,12 +259,12 @@ int main(int argc, char *argv[])
             
             else if (tabuleiro2[l1][c1] == 1 || tabuleiro2[l2][c2] == 1) //Quando a coordenada já foi descoberta, é impossível
             {                                                            //"reencontrar" ela       
-                system("color 4");
+                printf("\033[31m"); //Vermelho
                 printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
                 sleep(1);
                 sleep(1);
                 sleep(1);
-                system("cls");
+                printf("\e[H\e[2J");
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 i--;
             }
@@ -277,11 +277,11 @@ int main(int argc, char *argv[])
             
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
-                system("color 2"); //Muda o terminal para verde, indicando acerto
+                printf("\033[32m"); //Muda o terminal para verde, indicando acerto
                 aux--;
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
-                system("cls");
+                printf("\e[H\e[2J");
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 a.pontuacao[i]++; //Incrementa um ponto para o jogador que acertar
@@ -307,10 +307,10 @@ int main(int argc, char *argv[])
             
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
             {
-                system("color 4"); //Muda o terminal para vermelho - indicando erro
+                printf("\033[31m"); //Muda o terminal para vermelho - indicando erro
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção
                 tabuleiro2[l2][c2] = 1;
-                system("cls");
+                printf("\e[H\e[2J");
                 printf("\nErrou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
@@ -318,7 +318,7 @@ int main(int argc, char *argv[])
             }            
                 if (aux==0) //Variável "aux" foi utilizada para 
                 {           //retornar o valor de pares da função
-                    system("color 2");
+                    printf("\033[32m");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
                     result = fopen("Result_.txt", "w"); //Chamada para abrir e escrever no arquivo de resultado
                     if (arq == NULL) //Se retornar nulo, deu erro
