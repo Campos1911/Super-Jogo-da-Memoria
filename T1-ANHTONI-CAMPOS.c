@@ -61,9 +61,7 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     printf("\n\n\t-----Para jogar, utilize coordenadas de 0 a 3, para linhas e colunas-----");
     sleep(1);
     sleep(1); //As funçoes sleep(1) foram usadas como forma de dar um
-    sleep(1); //tempo entre cada apresentação (usadas para evitar que
-    sleep(1); //a biblioteca windows.h fosse uma opção)
-    sleep(1);
+    sleep(1); //tempo entre cada apresentação (usadas para evitar que a biblioteca windows.h fosse uma opção.
     printf("\e[H\e[2J"); //Limpa o terminal para prosseguir
 }
 
