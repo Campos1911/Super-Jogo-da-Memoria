@@ -1,0 +1,8 @@
+all:
+	gcc -wall -o T2-ANTHONI-CAMPOS T2-ANTHONI-CAMPOS.c
+
+run:
+	./T2-ANTHONI-CAMPOS
+
+clean:
+	rm T2-ANTHONI-CAMPOS.o
