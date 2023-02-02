@@ -179,7 +179,7 @@ int main(int argc, char *argv[])
     int tabuleiro[TAM][TAM], tabuleiro2[TAM][TAM], contador[TAM];
     int aux, teste; //Usados nos pares
     int k = 3; //Usado para o argv com nomes
-    char nome_result[TAM];
+    char nome_result[TAM] = "Result_";
     FILE *arq; //Ponteiro para arquivo
     FILE *result;
 
@@ -320,7 +320,7 @@ int main(int argc, char *argv[])
                 {           //retornar o valor de pares da função
                     printf("\033[32m");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
-                    result = fopen("Result_.txt", "w"); //Chamada para abrir e escrever no arquivo de resultado
+                    result = fopen(strcat(nome_result, argv[1]), "w"); //Chamada para concatenar os nomes e escrever resultados
                     if (arq == NULL) //Se retornar nulo, deu erro
                     {
                         printf("Erro ao abrir!\n");
