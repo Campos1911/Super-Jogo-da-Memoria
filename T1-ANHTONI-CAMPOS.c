@@ -137,12 +137,7 @@ int pares(int par, int tabuleiro[4][4], int contador[16])
                 }
             }
             
-            if (conta==2 || conta ==3)
-            {
-                par++;
-            }
-
-            else if (conta==4)
+            if (conta>=2)
             {
                 par++;
             }
