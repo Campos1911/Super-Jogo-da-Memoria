@@ -17,11 +17,6 @@
 
 #define TAM 100
 
-int tabuleiro[TAM][TAM], tamanho_matriz; //Tabuleiro padrão do jogo
-int tabuleiro2[TAM][TAM] = {0}; //Tabuleiro máscara, utilizado para printar a casa descoberta, quando certa
-int contador[TAM*TAM] = {0};
-int quantidade_nomes[TAM];
-
 typedef struct 
 {
     int pontuacao[100];
@@ -35,10 +30,7 @@ typedef struct
 } tJogadores;
 
 
-
-void intervalo(){for(int i=0; i<500000000; i++){}} //Função para dar intervalo no começo do jogo
-
-void interface() //Interface montada para dar ao código mais semelhança com um jogo
+void interface(int tamanho_matriz) //Interface montada para dar ao código mais semelhança com um jogo
 {
     int opcao;
 
@@ -54,43 +46,30 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     printf("(1) Claro que sim!!\n(2) Ainda nao, mas vou tentar\n(3) Definitivamente nao, eu desisto!\n");
     printf("\n\nInsira sua resposta aqui: ");
     scanf("%d", &opcao); //Lê a opção do usuário
+        while (opcao > 3 || opcao < 1)
+        {
+            printf("Jogador, essa opcao nao e valida, tente novamente\n\n");
+            scanf("%d", &opcao);
+        }
+            
         if (opcao==1)
         {
-            op1: printf("PERFEITO!!Aperte qualquer tecla para jogar\n\n");
+            printf("PERFEITO!!Aperte qualquer tecla para jogar\n\n");
             getchar();
+            
         }
         else if (opcao==2)
         {
-            op2: printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Aperte alguma tecla para comecar\n\n");
+            printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Aperte alguma tecla para comecar\n\n");
             getchar();
         }
         else if (opcao==3)
         {
-            op3: printf("Entendo...Espero que futuramente voce se sinta melhor. Aperte qualquer tecla para sair.\n\n");
+            printf("Entendo...Espero que futuramente voce se sinta melhor. Aperte qualquer tecla para sair.\n\n");
             getchar();
             exit(1);
         }
-        else //Caso o usuário informe alguma opção não válida, o código entrará no loop, pedindo uma informação correta
-        {
-            while (opcao > 3 || opcao < 1)
-            {
-                printf("Jogador, essa opcao nao e valida, tente novamente\n\n");
-                scanf("%d", &opcao);
-                    if (opcao==1)
-                    {
-                        goto op1; //Quando o usuário informa uma opção correta, o código usa o "goto" para retornar às linhas de cima
-                    }
-                    else if (opcao==2)
-                    {
-                        goto op2;
-                    }
-                    else if (opcao==3)
-                    {
-                        goto op3;
-                    }
-            }
-            
-        }
+    
     sleep(1);
     printf("\n\n\t-----Para jogar, utilize coordenadas de 1 a %d, para linhas e colunas-----", tamanho_matriz);
     sleep(1);
@@ -98,10 +77,10 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     sleep(1); //tempo entre cada apresentação (usadas para evitar que
     sleep(1); //a biblioteca windows.h fosse uma opção)
     sleep(1);
-    system("clear");
+    system("cls");
 }
 
-void randomiza(int semente) //Randomiza letras em posições do tabuleiro
+void randomiza(int semente, int contador[TAM], int tabuleiro[TAM][TAM], int tamanho_matriz) //Randomiza letras em posições do tabuleiro
 {
     int k = 0;
     srand(semente);
@@ -119,7 +98,7 @@ void randomiza(int semente) //Randomiza letras em posições do tabuleiro
     }
 }
 
-void tabuleiroOculto() //Printa o tabuleiro sem nenhum preenchimento de letras
+void tabuleiroOculto(int tamanho_matriz) //Printa o tabuleiro sem nenhum preenchimento de letras
 {
   for (int i = 1; i <= tamanho_matriz; i++)
   {
@@ -132,7 +111,7 @@ void tabuleiroOculto() //Printa o tabuleiro sem nenhum preenchimento de letras
   
 }
 
-void altera()
+void altera(int tabuleiro2[TAM][TAM], int tabuleiro[TAM][TAM], int tamanho_matriz)
 {
     for (int i = 1; i <= tamanho_matriz; i++)
     {
@@ -154,7 +133,7 @@ void altera()
     
 }
 
-int pares(int par)
+int pares(int par, int tamanho_matriz, int tabuleiro[TAM][TAM], int contador[TAM])
 {
     int conta = 0;
     par = 0;
@@ -196,7 +175,8 @@ void zera_struct(tPontuacao* a) //Ponteiro acessa o endereço da struct
 
 int main(int argc, char *argv[])
 {
-    int l1, c1, l2, c2, semente, numero_casas; //Usado nas coordenadas
+    int l1, c1, l2, c2, semente, tamanho_matriz; //Usado nas coordenadas
+    int tabuleiro[TAM][TAM], tabuleiro2[TAM][TAM], contador[TAM];
     int aux, teste; //Usados nos pares
     int k = 3; //Usado para o argv com nomes
     char nome_result[TAM];
@@ -205,7 +185,7 @@ int main(int argc, char *argv[])
 
 
     tPontuacao a; //Structs declaradas
-    tJogadores nome[10];
+    tJogadores nome[TAM];    
 
     zera_struct(&a); //Chama a função de zerar structs
     
@@ -216,7 +196,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
     
-    for (int i = 3; i < 10; i++)
+    for (int i = 3; i < TAM; i++)
     {
         nome[i].jogadores = argv[i]; //Nomeia as posições da struct com os nomes passados no argumento
     }
@@ -239,32 +219,28 @@ int main(int argc, char *argv[])
     
     fclose(arq); //Fecha o arquivo
 
-
     tamanho_matriz = atoi(argv[2]); //Converte tamanho da matriz para int, para imprimir o tabuleiro
-    numero_casas = malloc(tamanho_matriz*sizeof(int));
-
     system("color 3");  //Muda a cor da letra
-    system("clear"); //Limpa o terminal
-    interface();
+    system("cls"); //Limpa o terminal
+    interface(tamanho_matriz);
     printf("Por favor, insira um valor de semente para começarmos: "); //Pede a semente para testes
     scanf("%d", &semente);
     printf("\n");
-    randomiza(semente); //Chama a função, usando o valor escolhido pelo jogador
+    randomiza(semente, contador, tabuleiro, tamanho_matriz); //Chama a função, usando o valor escolhido pelo jogador
     sleep(1);
     sleep(1);    
     sleep(1);
-    system("clear");
+    system("cls");
     printf("\n");
-    tabuleiroOculto(); //Printa o tabuleiro com as " * "
-    aux = pares(teste); //Testa quantos pares o tabuleiro possui
+    tabuleiroOculto(tamanho_matriz); //Printa o tabuleiro com as " * "
+    aux = pares(teste, tamanho_matriz, tabuleiro,contador); //Testa quantos pares o tabuleiro possui
 
-    zerando:
     while (1)
     {
 
         for (int i = 3; i < argc; i++) //"I" sempre tem que ser menor que o número de 
         {                                //nomes inseridos, para que os jogadores possam ser chamados        
-        printf("%s, escolha duas coordenadas de linha e coluna (caso queira sair, insira as coordenadas 0, 0, 0, 0)\n", argv[i]);
+        printf("%s, escolha duas coordenadas de linha e coluna (caso queira sair, insira as coordenadas 0, 0)\n", argv[i]);
         printf("FALTAM %d PARES\n", aux);
         scanf("%d %d %d %d", &l1, &c1, &l2, &c2);
             
@@ -288,8 +264,8 @@ int main(int argc, char *argv[])
                 sleep(1);
                 sleep(1);
                 sleep(1);
-                system("clear");
-                altera();
+                system("cls");
+                altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 i--;
             }
 
@@ -305,9 +281,9 @@ int main(int argc, char *argv[])
                 aux--;
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
-                system("clear");
+                system("cls");
                 printf("\nAcertou!!\n-------------------\n\n");
-                altera();
+                altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 a.pontuacao[i]++; //Incrementa um ponto para o jogador que acertar
                 
                 arq = fopen(argv[1], "w"); //Mesma função que a abertura de cima, porém, começa a contabilizar pontos
@@ -334,9 +310,9 @@ int main(int argc, char *argv[])
                 system("color 4"); //Muda o terminal para vermelho - indicando erro
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção
                 tabuleiro2[l2][c2] = 1;
-                system("clear");
+                system("cls");
                 printf("\nErrou!!\n-------------------\n\n");
-                altera();
+                altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
             }            
@@ -365,6 +341,5 @@ int main(int argc, char *argv[])
                 
             }
     }
-    free(numero_casas);
     return 0;
 }

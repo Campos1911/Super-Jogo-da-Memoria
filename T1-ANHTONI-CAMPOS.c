@@ -33,7 +33,6 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     printf("(1) Claro que sim!!\n(2) Ainda nao, mas vou tentar\n(3) Definitivamente nao, eu desisto!\n");
     printf("\n\nInsira sua resposta aqui: ");
     scanf("%d", &opcao); //Lê a opção do usuário
-        
         while (opcao > 3 || opcao < 1)
         {
             printf("Jogador, essa opcao nao e valida, tente novamente\n\n");
@@ -170,10 +169,6 @@ int main()
     scanf("%d", &semente);
     printf("\n");
     randomiza(semente, contador, tabuleiro); //Chama a função, usando o valor escolhido pelo jogador
-    sleep(1);
-    sleep(1);    
-    sleep(1);
-    sleep(1);
     sleep(1);
     sleep(1);
     sleep(1);
