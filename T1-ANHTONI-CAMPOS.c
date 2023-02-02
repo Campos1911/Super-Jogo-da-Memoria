@@ -11,77 +11,69 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <time.h>
+#include <unistd.h>
 
-int tabuleiro[4][4]; //Tabuleiro padrão do jogo
-int tabuleiro2[4][4] = {0}; //Tabuleiro máscara, utilizado para printar a casa descoberta, quando certa
-int contador[16] = {0};
+typedef struct 
+{
+    int pontos;
+
+} tPontos;
+
+
 
 void interface() //Interface montada para dar ao código mais semelhança com um jogo
 {
     int opcao;
 
     printf("\n\n\t\tSeja bem-vindo(a) ao SUPER JOGO DA MEMORIA!!!\n");
-    intervalo();
-    intervalo();
-    intervalo();
+    sleep(1);
+    sleep(1);
+    sleep(1);
     printf("\t  Esse jogo foi desenvolvido por: Anthoni Bernardi Thomes Campos\n\n");
-    intervalo();
-    intervalo();
-    intervalo();
+    sleep(1);
+    sleep(1);
+    sleep(1);
     printf("\n\t\tVOCE SE SENTE PRONTO(A) PARA JOGAR?\n\n");
     printf("(1) Claro que sim!!\n(2) Ainda nao, mas vou tentar\n(3) Definitivamente nao, eu desisto!\n");
     printf("\n\nInsira sua resposta aqui: ");
     scanf("%d", &opcao); //Lê a opção do usuário
+        
+        while (opcao > 3 || opcao < 1)
+        {
+            printf("Jogador, essa opcao nao e valida, tente novamente\n\n");
+            scanf("%d", &opcao);
+        }
+            
         if (opcao==1)
         {
-            op1: printf("PERFEITO!!Aperte qualquer tecla para jogar\n\n");
-            getch();
+            printf("PERFEITO!!Aperte qualquer tecla para jogar\n\n");
+            getchar();
+            
         }
         else if (opcao==2)
         {
-            op2: printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Aperte alguma tecla para comecar\n\n");
-            getch();
+            printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Aperte alguma tecla para comecar\n\n");
+            getchar();
         }
         else if (opcao==3)
         {
-            op3: printf("Entendo...Espero que futuramente voce se sinta melhor. Aperte qualquer tecla para sair.\n\n");
-            getch();
+            printf("Entendo...Espero que futuramente voce se sinta melhor. Aperte qualquer tecla para sair.\n\n");
+            getchar();
             exit(1);
         }
-        else //Caso o usuário informe alguma opção não válida, o código entrará no loop, pedindo uma informação correta
-        {
-            while (opcao > 3 || opcao < 1)
-            {
-                printf("Jogador, essa opcao nao e valida, tente novamente\n\n");
-                scanf("%d", &opcao);
-                    if (opcao==1)
-                    {
-                        goto op1; //Quando o usuário informa uma opção correta, o código usa o "goto" para retornar às linhas de cima
-                    }
-                    else if (opcao==2)
-                    {
-                        goto op2;
-                    }
-                    else if (opcao==3)
-                    {
-                        goto op3;
-                    }
-            }
-            
-        }
-    intervalo();
+
+    sleep(1);
     printf("\n\n\t-----Para jogar, utilize coordenadas de 0 a 3, para linhas e colunas-----");
-    intervalo();
-    intervalo(); //As funçoes intervalo foram usadas como forma de dar um
-    intervalo(); //tempo entre cada apresentação (usadas para evitar que
-    intervalo(); //a biblioteca windows.h fosse uma opção)
-    intervalo();
-    system("cls");
+    sleep(1);
+    sleep(1); //As funçoes usleep(10000000) foram usadas como forma de dar um
+    sleep(1); //tempo entre cada apresentação (usadas para evitar que
+    sleep(1); //a biblioteca windows.h fosse uma opção)
+    sleep(1);
+    system("cls"); //printf("\e[H\e[2j");
 }
 
-void randomiza(int semente) //Randomiza letras em posições do tabuleiro
+void randomiza(int semente, int contador[16], int tabuleiro[4][4]) //Randomiza letras em posições do tabuleiro
 {
     int k = 0;
     srand(semente);
@@ -112,7 +104,7 @@ void tabuleiroOculto() //Printa o tabuleiro sem nenhum preenchimento de letras
   
 }
 
-void altera()
+void altera(int tabuleiro2[4][4], int tabuleiro[4][4])
 {
     for (int i = 0; i < 4; i++)
     {
@@ -134,7 +126,7 @@ void altera()
     
 }
 
-int pares(int par)
+int pares(int par, int tabuleiro[4][4], int contador[16])
 {
     int conta = 0;
     par = 0;
@@ -168,28 +160,33 @@ int pares(int par)
     return par;
 }
 
-void intervalo(){for(int i=0; i<500000000; i++){}} //Função para dar intervalo no começo do jogo
-
 
 int main() 
 {
     int l1, c1, l2, c2, semente;
     int aux, teste = 0;
+    int tabuleiro[4][4], tabuleiro2[4][4], contador[16]; //Nomeando variáveis de tabuleiro
+    tPontos p; //Nomeando struct
 
     system("color 3");  //Muda a cor da letra
-    system("cls"); //Limpa o terminal
+    system("cls");
     interface();
+    sleep(1);
     printf("Por favor, insira um valor de semente para começarmos: "); //Pede a semente para testes
     scanf("%d", &semente);
     printf("\n");
-    randomiza(semente); //Chama a função, usando o valor escolhido pelo jogador
-    intervalo();
-    intervalo();    
-    intervalo();
+    randomiza(semente, contador, tabuleiro); //Chama a função, usando o valor escolhido pelo jogador
+    sleep(1);
+    sleep(1);    
+    sleep(1);
+    sleep(1);
+    sleep(1);
+    sleep(1);
+    sleep(1);
     system("cls");
     printf("\n");
     tabuleiroOculto(); //Printa o tabuleiro com as " * "
-    aux = pares(teste); //Testa quantos pares o tabuleiro possui
+    aux = pares(teste, tabuleiro, contador); //Testa quantos pares o tabuleiro possui
 
     while (1)
     {
@@ -213,22 +210,23 @@ int main()
             {                                                            //"reencontrar" ela       
                 system("color 4");
                 printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
-                intervalo();
-                intervalo();
-                intervalo();
+                sleep(1);
+                sleep(1);
+                sleep(1);
                 system("cls");
-                altera();
+                altera(tabuleiro2, tabuleiro);
             }
             
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
                 system("color 2"); //Muda o terminal para verde, indicando acerto
-                aux--;
+                aux--; //Tira um par da conta
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
                 system("cls");
                 printf("\nAcertou!!\n-------------------\n\n");
-                altera();
+                p.pontos++;
+                altera(tabuleiro2, tabuleiro);
             }
             
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
@@ -238,7 +236,7 @@ int main()
                 tabuleiro2[l2][c2] = 1;
                 system("cls");
                 printf("\nErrou!!\n-------------------\n\n");
-                altera();
+                altera(tabuleiro2, tabuleiro);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
             }            
