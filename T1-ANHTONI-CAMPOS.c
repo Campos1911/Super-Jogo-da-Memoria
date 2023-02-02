@@ -9,6 +9,9 @@
  * e interaja com o jogador, conforme suas escolhas
  *********************************************************************************/
 
+
+// ------------NÃO UTILIZEI A STRUCT DE COORDENADAS POR CONTA DA CONFUSÃO DO ENUNCIADO (CONVERSAMOS NA SALA)-------
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
