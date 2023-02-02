@@ -14,14 +14,6 @@
 #include <time.h>
 #include <unistd.h>
 
-typedef struct 
-{
-    int pontos;
-
-} tPontos;
-
-
-
 void interface() //Interface montada para dar ao código mais semelhança com um jogo
 {
     int opcao;
@@ -166,7 +158,6 @@ int main()
     int l1, c1, l2, c2, semente;
     int aux, teste = 0;
     int tabuleiro[4][4], tabuleiro2[4][4], contador[16]; //Nomeando variáveis de tabuleiro
-    tPontos p; //Nomeando struct
 
     system("color 3");  //Muda a cor da letra
     system("cls");
@@ -225,7 +216,6 @@ int main()
                 tabuleiro2[l2][c2] = 1;
                 system("cls");
                 printf("\nAcertou!!\n-------------------\n\n");
-                p.pontos++;
                 altera(tabuleiro2, tabuleiro);
             }
             
