@@ -60,11 +60,11 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     sleep(1);
     printf("\n\n\t-----Para jogar, utilize coordenadas de 0 a 3, para linhas e colunas-----");
     sleep(1);
-    sleep(1); //As funçoes usleep(10000000) foram usadas como forma de dar um
+    sleep(1); //As funçoes sleep(1) foram usadas como forma de dar um
     sleep(1); //tempo entre cada apresentação (usadas para evitar que
     sleep(1); //a biblioteca windows.h fosse uma opção)
     sleep(1);
-    system("cls"); //printf("\e[H\e[2j");
+    printf("\e[H\e[2J"); //Limpa o terminal para prosseguir
 }
 
 void randomiza(int semente, int contador[16], int tabuleiro[4][4]) //Randomiza letras em posições do tabuleiro
@@ -145,7 +145,7 @@ int pares(int par, int tabuleiro[4][4], int contador[16])
         }              //para poder começar uma nova posição
     }
 
-    par = par/2; //Divide por dois, pois o par se repete ao percorrer a matriz
+    par = par/2; //Divide por dois, pois o par se repete pelo menos uma vez, ao percorrer a matriz
     return par;
 }
 
@@ -156,8 +156,8 @@ int main()
     int aux, teste = 0;
     int tabuleiro[4][4], tabuleiro2[4][4], contador[16]; //Nomeando variáveis de tabuleiro
 
-    system("color 3");  //Muda a cor da letra
-    system("cls");
+    printf("\033[34m"); //Muda a cor da letra
+    printf("\e[H\e[2J");
     interface();
     sleep(1);
     printf("Por favor, insira um valor de semente para começarmos: "); //Pede a semente para testes
@@ -167,7 +167,7 @@ int main()
     sleep(1);
     sleep(1);
     sleep(1);
-    system("cls");
+    printf("\e[H\e[2J");
     printf("\n");
     tabuleiroOculto(); //Printa o tabuleiro com as " * "
     aux = pares(teste, tabuleiro, contador); //Testa quantos pares o tabuleiro possui
@@ -180,7 +180,7 @@ int main()
             
             if (l1 == 0 && c1 == 0 && l2==0 && c2 == 0) //Se colocar as coordenadas zero, o jogo acaba
             {
-                system("color 6");
+                printf("\033[33m"); //Muda a cor para amarelo
                 printf("Ate mais, jogador(a)!!\n");
                 break;
             }
@@ -192,32 +192,32 @@ int main()
             
             else if (tabuleiro2[l1][c1] == 1 || tabuleiro2[l2][c2] == 1) //Quando a coordenada já foi descoberta, é impossível
             {                                                            //"reencontrar" ela       
-                system("color 4");
+                printf("\033[31m"); //Muda a cor para vermelho
                 printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
                 sleep(1);
                 sleep(1);
                 sleep(1);
-                system("cls");
+                printf("\e[H\e[2J");
                 altera(tabuleiro2, tabuleiro);
             }
             
             else if (tabuleiro[l1][c1] == tabuleiro[l2][c2]) //Se forem valores iguais, ele considera um acerto
             {
-                system("color 2"); //Muda o terminal para verde, indicando acerto
+                printf("\033[32m"); //Muda o terminal para verde, indicando acerto
                 aux--; //Tira um par da conta
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção correta
                 tabuleiro2[l2][c2] = 1;
-                system("cls");
+                printf("\e[H\e[2J");
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro);
             }
             
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
             {
-                system("color 4"); //Muda o terminal para vermelho - indicando erro
+                printf("\033[31m"); //Muda o terminal para vermelho - indicando erro
                 tabuleiro2[l1][c1] = 1; //Muda para um para imprimir a opção
                 tabuleiro2[l2][c2] = 1;
-                system("cls");
+                printf("\e[H\e[2J");
                 printf("\nErrou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
@@ -225,7 +225,7 @@ int main()
             }            
                 if (aux==0) //Variável "aux" foi utilizada para 
                 {           //retornar o valor de pares da função
-                    system("color 2");
+                    printf("\033[32m");
                     printf("Sem pares disponiveis, fim de jogo!!\n");
                     break;
                 }
