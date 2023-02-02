@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <unistd.h>
 
 #define TAM 100
 
@@ -42,13 +43,13 @@ void interface() //Interface montada para dar ao código mais semelhança com um
     int opcao;
 
     printf("\n\n\t\tSeja bem-vindo(a) ao SUPER JOGO DA MEMORIA!!!\n");
-    intervalo();
-    intervalo();
-    intervalo();
+    sleep(1);
+    sleep(1);
+    sleep(1);
     printf("\t  Esse jogo foi desenvolvido por: Anthoni Bernardi Thomes Campos\n\n");
-    intervalo();
-    intervalo();
-    intervalo();
+    sleep(1);
+    sleep(1);
+    sleep(1);
     printf("\n\t\tVOCE SE SENTE PRONTO(A) PARA JOGAR?\n\n");
     printf("(1) Claro que sim!!\n(2) Ainda nao, mas vou tentar\n(3) Definitivamente nao, eu desisto!\n");
     printf("\n\nInsira sua resposta aqui: ");
@@ -90,13 +91,13 @@ void interface() //Interface montada para dar ao código mais semelhança com um
             }
             
         }
-    intervalo();
+    sleep(1);
     printf("\n\n\t-----Para jogar, utilize coordenadas de 1 a %d, para linhas e colunas-----", tamanho_matriz);
-    intervalo();
-    intervalo(); //As funçoes intervalo foram usadas como forma de dar um
-    intervalo(); //tempo entre cada apresentação (usadas para evitar que
-    intervalo(); //a biblioteca windows.h fosse uma opção)
-    intervalo();
+    sleep(1);
+    sleep(1); //As funçoes intervalo foram usadas como forma de dar um
+    sleep(1); //tempo entre cada apresentação (usadas para evitar que
+    sleep(1); //a biblioteca windows.h fosse uma opção)
+    sleep(1);
     system("clear");
 }
 
@@ -249,9 +250,9 @@ int main(int argc, char *argv[])
     scanf("%d", &semente);
     printf("\n");
     randomiza(semente); //Chama a função, usando o valor escolhido pelo jogador
-    intervalo();
-    intervalo();    
-    intervalo();
+    sleep(1);
+    sleep(1);    
+    sleep(1);
     system("clear");
     printf("\n");
     tabuleiroOculto(); //Printa o tabuleiro com as " * "
@@ -284,9 +285,9 @@ int main(int argc, char *argv[])
             {                                                            //"reencontrar" ela       
                 system("color 4");
                 printf("\nCUIDADO JOGADOR, essa coordenada ja foi descoberta\n\n");
-                intervalo();
-                intervalo();
-                intervalo();
+                sleep(1);
+                sleep(1);
+                sleep(1);
                 system("clear");
                 altera();
                 i--;
