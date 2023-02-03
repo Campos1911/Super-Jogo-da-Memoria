@@ -144,6 +144,12 @@ Aqui, esse trecho de código cria um arquivo com o nome "Result_.txt", para salv
 
 Esse é outro trecho, que também salva os pontos em um arquivo (com o nome fornecido pelos jogadores) e printa a tabela de pontos na tela (ao acertar algum par).
 
+## Contatenando nomes para gerar arquivo "Result_"
+
+Utilizando a função da "strcat" da "string.h", concatenei a string "Result_" com o nome do arquivo passado na chamada do programa
+
+![Capturar](https://user-images.githubusercontent.com/119754605/216596958-da55bf82-d540-47ae-b687-761ea22558f4.PNG)
+
 # Autor 
 Projeto desenvolvido por Anthoni Campos - Entre em contato!
 
