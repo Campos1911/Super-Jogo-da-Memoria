@@ -52,22 +52,27 @@ void interface(int tamanho_matriz) //Interface montada para dar ao código mais 
             scanf("%d", &opcao);
         }
             
-        if (opcao==1)
-        {
-            printf("PERFEITO!!Aperte qualquer tecla para jogar\n\n");
-            getchar();
-            
-        }
-        else if (opcao==2)
-        {
-            printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Aperte alguma tecla para comecar\n\n");
-            getchar();
-        }
-        else if (opcao==3)
-        {
-            printf("Entendo...Espero que futuramente voce se sinta melhor. Aperte qualquer tecla para sair.\n\n");
-            getchar();
-            exit(1);
+        while (1)
+        { 
+            if (opcao==1)
+            {
+                printf("PERFEITO!!Insira qualquer tecla para jogar\n\n");
+                scanf(" %c", &confirmacao);
+                break;
+                
+            }
+            else if (opcao==2)
+            {
+                printf("CORAGEM JOGADOR!!Voce vai ver que nao e dificil. Insira alguma tecla para comecar\n\n");
+                scanf(" %c", &confirmacao);
+                break;
+            }
+            else if (opcao==3)
+            {
+                printf("Entendo...Espero que futuramente voce se sinta melhor. Insira qualquer tecla para sair.\n\n");
+                scanf(" %c", &confirmacao);
+                exit(1);
+            }
         }
     
     sleep(1);
