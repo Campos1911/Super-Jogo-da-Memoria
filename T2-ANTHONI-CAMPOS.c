@@ -33,6 +33,7 @@ typedef struct
 void interface(int tamanho_matriz) //Interface montada para dar ao código mais semelhança com um jogo
 {
     int opcao;
+    char confirmacao;
 
     printf("\n\n\t\tSeja bem-vindo(a) ao SUPER JOGO DA MEMORIA!!!\n");
     sleep(1);
