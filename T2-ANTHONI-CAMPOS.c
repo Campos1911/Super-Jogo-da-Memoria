@@ -219,7 +219,7 @@ int main(int argc, char *argv[])
     
     fclose(arq); //Fecha o arquivo
 
-    tamanho_matriz = atoi(argv[2]); //Converte tamanho da matriz para int, para imprimir o tabuleiro
+    tamanho_matriz = (atoi(argv[2])); //Converte tamanho da matriz para int ao quadrado
     printf("\033[34m");  //Muda a cor da letra
     printf("\e[H\e[2J"); //Limpa o terminal
     interface(tamanho_matriz);
