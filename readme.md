@@ -7,7 +7,6 @@
 
 O jogo foi desenvolvido no sistema operacional "Windows". Portanto, é preferivel que o código seja testado em máquinas com esse sistema instalado, para evitar possíveis problemas de incompatibilidade.
 
-* Para jogar o jogo em uma máquina linux, você precisará da biblioteca "conio.h" instalada, para isso, utilize esse [Tutorial](https://www.youtube.com/watch?v=V119IzUgwJw)
 
 Tabela de conteúdos
 =================
@@ -34,7 +33,7 @@ O jogo da memória tem por objetivo fornecer um tabuleiro com determinadas peça
 # Como Rodar o Jogo?
 Antes de começar, você vai precisar ter instalado em sua máquina um compilador de linguagem " C ", por exemplo o GCC. Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-* Para rodar o código, você precisa ir até o terminal e digitar: gcc jogo.c -o jogo
+* Para rodar o código, você precisa ir até o terminal e digitar: gcc TX-ANTHONI-CAMPOS -o jogo (O "x" representa a versão jogada)
 
 * Em seguida, será criado o arquivo " jogo.exe "
 
@@ -54,11 +53,6 @@ Foi utilizada no desenvolvimento do projeto, quando a função "srand" estava re
 
 ![Capturar](https://user-images.githubusercontent.com/119754605/212426798-f26be41a-f7ce-46ea-9735-fb82856b4595.PNG)
 
-### Conio.h:
-
-Utilizada para as funções "system("cls")" e "system("color")", responsáveis, respectivamente, por limpar o terminal e definir uma cor para as letras.
-
-![Capturar](https://user-images.githubusercontent.com/119754605/212427251-8831c0c8-35e2-4664-bc1a-c39a27cb617d.PNG)
 
 # Escolhas Tomadas na Programação
 
@@ -114,9 +108,9 @@ Utilizado para alertar sobre o fim de pares disponíveis para o jogador encontra
 
 # Implementações Posteriores
 
-### Cores ao acertar e errar
+### Cores ao acertar e errar:
 
-![Capturar](https://user-images.githubusercontent.com/119754605/213035087-81f1db98-54d9-4105-a625-52db03fdb0c5.PNG)
+![Capturar](https://user-images.githubusercontent.com/119754605/216483966-5034cf1e-2659-4933-a255-b3c78ad4b18b.PNG)
 
 Agora, quando o usuário acertar ou errar, o terminal mudará de cor, para indicar se foi uma escolha correta ou incorreta.
 
