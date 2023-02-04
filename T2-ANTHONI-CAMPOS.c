@@ -178,7 +178,6 @@ void zera_struct(tPontuacao* a) //Ponteiro acessa o endereço da struct
 }
 
 
-
 int main(int argc, char *argv[])
 {
     int l1, c1, l2, c2, semente, tamanho_matriz; //Usado nas coordenadas
