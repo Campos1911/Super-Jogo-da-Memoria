@@ -339,11 +339,11 @@ int main(int argc, char *argv[])
                             {
                                 if (tabuleiro2[i][j] == 1)
                                 {
-                                   fprintf(arq, "  %c  ", tabuleiro[i][j]);
+                                   fprintf(arq, "  %c  ", tabuleiro[i][j]); //Printa o par
                                 }
                                 else
                                 {
-                                    fprintf(arq, "  *  ", stdout);
+                                    fprintf(arq, "  *  ", stdout); //Printa vazio se não houver um par presente
                                 }
                                 
                                 
