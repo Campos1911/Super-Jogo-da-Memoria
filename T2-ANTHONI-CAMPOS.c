@@ -343,7 +343,7 @@ int main(int argc, char *argv[])
                                 }
                                 else
                                 {
-                                    fprintf(arq, "  *  ", stdout); //Printa vazio se não houver um par presente
+                                    fprintf(arq, "  *  ", stdout); //Printa vazio se não houver um par
                                 }
                                 
                                 
