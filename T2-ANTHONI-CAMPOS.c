@@ -193,6 +193,7 @@ int main(int argc, char *argv[])
     tJogadores nome[TAM];    
 
     zera_struct(&a); //Chama a função de zerar structs
+    tamanho_matriz = (atoi(argv[2])); //Converte tamanho da matriz para int ao quadrado
     
 
     if (argc < 3) //Testa a quantidade de argumentos
@@ -207,24 +208,7 @@ int main(int argc, char *argv[])
     }
     
 
-    arq = fopen(argv[1], "w"); //Chamada para abrir e escrever no arquivo
-        if (arq == NULL) //Se retornar nulo, deu erro
-        {
-            printf("Erro ao abrir!\n");
-            exit(1);
-        }
-        else
-        {
-            fprintf(arq, "Pontuação:\n", stdout);
-                for (int i = 3; i < argc; i++)
-                {
-                    fprintf(arq, "%s: %d\n", nome[i].jogadores, a.pontuacao[i]); //Printa os jogadores e seus pontos
-                }
-        }
-    
-    fclose(arq); //Fecha o arquivo
 
-    tamanho_matriz = (atoi(argv[2])); //Converte tamanho da matriz para int ao quadrado
     slots = malloc(tamanho_matriz*sizeof(int));
     printf("\033[34m");  //Muda a cor da letra
     printf("\e[H\e[2J"); //Limpa o terminal
@@ -240,6 +224,28 @@ int main(int argc, char *argv[])
     printf("\n");
     tabuleiroOculto(tamanho_matriz); //Printa o tabuleiro com as " * "
     aux = pares(teste, tamanho_matriz, tabuleiro,contador); //Testa quantos pares o tabuleiro possui
+    
+    arq = fopen(argv[1], "w"); //Chamada para abrir e escrever no arquivo
+        if (arq == NULL) //Se retornar nulo, deu erro
+        {
+            printf("Erro ao abrir!\n");
+            exit(1);
+        }
+        else
+        {
+            fprintf(arq, "Tabuleiro:\n", stdout);
+            for (int i = 1; i <= tamanho_matriz; i++)
+            {
+                for (int j = 1; j <= tamanho_matriz; j++)
+                {
+                    fprintf(arq, "  %c  ", tabuleiro[i][j]);
+                }
+                fprintf(arq, "\n\n", stdout);
+            }
+            
+        }
+    
+    fclose(arq); //Fecha o arquivo
 
     while (1)
     {
@@ -291,24 +297,11 @@ int main(int argc, char *argv[])
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 a.pontuacao[i]++; //Incrementa um ponto para o jogador que acertar
-                
-                arq = fopen(argv[1], "w"); //Mesma função que a abertura de cima, porém, começa a contabilizar pontos
-                if (arq == NULL)
-                {
-                    printf("Erro ao abrir!\n");
-                    exit(1);
-                }
-                else
-                {
-                    fprintf(arq, "Pontuação:\n", stdout);
                     fprintf(stdout, "Pontuação:\n", stdout); //Printa também o arquivo na tela
                         for (int i = 3; i < argc; i++)
                         {
-                            fprintf(arq, "%s: %d\n", nome[i].jogadores, a.pontuacao[i]);
                             fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]); //Printa pontos na tela
                         }
-                }
-                fclose(arq);
             }
             
             else if (tabuleiro[l1][c1] != tabuleiro[l2][c2]) //Se forem valores diferentes, ele considera um erro
@@ -321,6 +314,11 @@ int main(int argc, char *argv[])
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
+                    fprintf(stdout, "Pontuação:\n", stdout); //Printa também o arquivo na tela
+                        for (int i = 3; i < argc; i++)
+                        {
+                            fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]); //Printa pontos na tela
+                        }
             }            
                 if (aux==0) //Variável "aux" foi utilizada para 
                 {           //retornar o valor de pares da função
@@ -334,10 +332,23 @@ int main(int argc, char *argv[])
                     }
                     else
                     {
-                    fprintf(arq, "Pontuação:\n", stdout);
-                        for (int i = 3; i < argc; i++)
+                    fprintf(arq, "Resultado do Tabuleiro:\n", stdout);
+                        for (int i = 1; i <= tamanho_matriz; i++)
                         {
-                            fprintf(arq, "%s: %d\n", nome[i].jogadores, a.pontuacao[i]); //Printa os jogadores e seus pontos
+                            for (int j = 1; j <= tamanho_matriz; j++)
+                            {
+                                if (tabuleiro2[i][j] == 1)
+                                {
+                                   fprintf(arq, "  %c  ", tabuleiro[i][j]);
+                                }
+                                else
+                                {
+                                    fprintf(arq, "  *  ", stdout);
+                                }
+                                
+                                
+                            }
+                            fprintf(arq, "\n\n", stdout);
                         }
                     }
                     fclose(result); //Fecha o arquivo
