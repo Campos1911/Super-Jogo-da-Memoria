@@ -183,6 +183,7 @@ int main(int argc, char *argv[])
     int l1, c1, l2, c2, semente, tamanho_matriz; //Usado nas coordenadas
     int tabuleiro[TAM][TAM], tabuleiro2[TAM][TAM], contador[TAM];
     int aux, teste; //Usados nos pares
+    int *slots;
     char nome_result[TAM] = "Result_";
     FILE *arq; //Ponteiro para arquivo
     FILE *result;
@@ -224,6 +225,7 @@ int main(int argc, char *argv[])
     fclose(arq); //Fecha o arquivo
 
     tamanho_matriz = (atoi(argv[2])); //Converte tamanho da matriz para int ao quadrado
+    slots = malloc(tamanho_matriz*sizeof(int));
     printf("\033[34m");  //Muda a cor da letra
     printf("\e[H\e[2J"); //Limpa o terminal
     interface(tamanho_matriz);
@@ -344,6 +346,7 @@ int main(int argc, char *argv[])
                 }
                 
             }
+            free(slots);
     }
     return 0;
 }
