@@ -78,6 +78,7 @@ void interface(int tamanho_matriz) //Interface montada para dar ao código mais 
     
     sleep(1);
     printf("\n\n\t-----Para jogar, utilize coordenadas de 1 a %d, para linhas e colunas-----", tamanho_matriz);
+    printf("\n"); //Utilizado por conta de um bug na função 'sleep', que não printa o texto de cima
     sleep(1);
     sleep(1); //As funçoes intervalo foram usadas como forma de dar um
     sleep(1); //tempo entre cada apresentação (usadas para evitar que
@@ -233,14 +234,14 @@ int main(int argc, char *argv[])
         }
         else
         {
-            fprintf(arq, "Tabuleiro:\n", stdout);
+            fprintf(arq, "Tabuleiro:\n");
             for (int i = 1; i <= tamanho_matriz; i++)
             {
                 for (int j = 1; j <= tamanho_matriz; j++)
                 {
                     fprintf(arq, "  %c  ", tabuleiro[i][j]);
                 }
-                fprintf(arq, "\n\n", stdout);
+                fprintf(arq, "\n\n");
             }
             
         }
@@ -297,7 +298,7 @@ int main(int argc, char *argv[])
                 printf("\nAcertou!!\n-------------------\n\n");
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 a.pontuacao[i]++; //Incrementa um ponto para o jogador que acertar
-                    fprintf(stdout, "Pontuação:\n", stdout); //Printa também o arquivo na tela
+                    fprintf(stdout, "Pontuação:\n"); //Printa também o arquivo na tela
                         for (int i = 3; i < argc; i++)
                         {
                             fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]); //Printa pontos na tela
@@ -314,7 +315,7 @@ int main(int argc, char *argv[])
                 altera(tabuleiro2, tabuleiro, tamanho_matriz);
                 tabuleiro2[l1][c1] = 0; //Muda para zero para não imprimir o erro novamente
                 tabuleiro2[l2][c2] = 0;
-                    fprintf(stdout, "Pontuação:\n", stdout); //Printa também o arquivo na tela
+                    fprintf(stdout, "Pontuação:\n"); //Printa também o arquivo na tela
                         for (int i = 3; i < argc; i++)
                         {
                             fprintf(stdout, "%s: %d\n\n", nome[i].jogadores, a.pontuacao[i]); //Printa pontos na tela
@@ -332,7 +333,7 @@ int main(int argc, char *argv[])
                     }
                     else
                     {
-                    fprintf(arq, "Resultado do Tabuleiro:\n", stdout);
+                    fprintf(arq, "Resultado do Tabuleiro:\n");
                         for (int i = 1; i <= tamanho_matriz; i++)
                         {
                             for (int j = 1; j <= tamanho_matriz; j++)
@@ -343,12 +344,12 @@ int main(int argc, char *argv[])
                                 }
                                 else
                                 {
-                                    fprintf(arq, "  *  ", stdout); //Printa vazio se não houver um par
+                                    fprintf(arq, "  *  "); //Printa vazio se não houver um par
                                 }
                                 
                                 
                             }
-                            fprintf(arq, "\n\n", stdout);
+                            fprintf(arq, "\n\n");
                         }
                     }
                     fclose(result); //Fecha o arquivo
